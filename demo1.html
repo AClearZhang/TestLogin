@@ -1,46 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>session对象实训2</title>
         <style type="text/css">
-            
+                #div{width: 200px;height: 200px;background: blue;position: absolute;}
         </style>
+        <script type="text/javascript" src="drag.js" ></script>
     </head>
-    <body bgcolor="pink">
-        <hr>
-        session的创建时间是:<%=session.getCreationTime()%>&nbsp
-        <%=new Date(session.getCreationTime())%>
-        <br>
-        session的Id号:<%=session.getId()%>
-        <br>
-        客户最近一次访问时间是:<%=session.getLastAccessedTime()%>&nbsp
-        <%=new java.sql. Time(session.getLastAccessedTime())%>
-        <br>
-        两次请求间隔多长时间session将被取消(ms):
-        <%=session.getMaxInactiveInterval()%>
-        <br>
-        是否是新创建的session:<%=session.isNew()?"是":"否"%>
-        <hr>
-        <%
-            session.setAttribute("name", "一匹来自北方的狼");
-            session.setAttribute("password", "1008610001");
-        %>
-        姓名：<%=session.getAttribute("name") %> 
-        <br>
-        密码：<%=session.getAttribute("password") %>
-        <br>
-        ID号：<%=session.getId() %>
-        <br>
-        <%
-            session.setMaxInactiveInterval(500);
-        %>
-            最大有效时间：<%=session.getMaxInactiveInterval() %>
-        <br>
-        <%
-            session.removeAttribute("name");
-        %>
-        姓名：<%=session.getAttribute("name") %> 
-        <hr>
+    <body >
+
+        <div id="div1">
+            
+        </div>
+        
+        <script type="text/javascript">
+            drag('div1');
+        </script>
     </body>
 </html>
