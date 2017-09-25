@@ -7,5 +7,7 @@ function drag (id){
 		test = 0;
 		test1 = 0;
 	}
+	var disXX = 0;
+	var disYY = 0;
 
 }
