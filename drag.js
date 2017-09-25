@@ -9,6 +9,9 @@ function drag (id){
 		document.onmousemove = function(ev){
 			obj.style.left = ev.clienrX  - disX + 'px';
 			obj.style.top = ev.clienrY  - disY + 'px';
+
+			obj.style.left = ev.disrX  - disX + 'px';
+			obj.style.top = ev.disrY  - disY + 'px';
 		}
 	}
 
