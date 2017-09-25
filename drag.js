@@ -12,6 +12,7 @@ function drag (id){
 			
 			obj.style.left = ev.clienrX  - disX + 'px';
 			obj.style.top = ev.clienrY  - disY + 'px';
+
 		}
 	}
 
