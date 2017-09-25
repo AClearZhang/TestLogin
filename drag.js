@@ -4,8 +4,12 @@ function drag (id){
 	var disX = 0;
 	var disY = 0;
 	obj.onmousedown = function(){
-		test = 0;
-		test1 = 0;
+		disX = ev.pageX - obj.offsetLeft;
+		disY = ev.pageY - obj.offsetTop;
+		document.onmousemove = function(ev){
+			obj.style.left = ev.clienrX  - disX + 'px';
+			obj.style.top = ev.clienrY  - disY + 'px';
+		}
 	}
 
 }
